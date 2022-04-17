@@ -11,7 +11,7 @@ cd NFTcollection-downloader
 ## Install the Dependencies :-
 * A Moralis account and api key
 * python3 installed
-* ```pip3 install requirements.txt```
+* ```pip3 install -r requirements.txt```
 
 
 ##### Please create a .env file with you API key from moralis
