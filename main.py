@@ -1,6 +1,5 @@
-from dataclasses import field
-from traceback import print_tb
 from get_nft import get_nft_collection
+from download import download_collection
 import csv
 
 nft_address = input("Enter the NFT's contract address to retrieve all the data : ")
@@ -19,6 +18,6 @@ if choice == 1:
         writer.writerows(nft_collection) 
     print('Data succesfully written to a file : {}'.format(filename))
 elif choice == 2:
-    print('Sorry!! Support coming soon!!')
+    download_collection(nft_address, nft_collection)
 else:
     print('Sorry Unknown Option, Bye')

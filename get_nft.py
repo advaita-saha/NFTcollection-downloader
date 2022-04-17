@@ -4,6 +4,7 @@ from halo import Halo
 from dotenv import load_dotenv
 import os
 from time import sleep
+import json
 
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
@@ -37,7 +38,7 @@ def get_nft_collection(contract_address):
                 for i in data['result']:
                     nft_data.append({
                         'id': i['token_id'],
-                        'link': i['token_uri'],
+                        'link': json.loads(i['metadata'])['image'],
                     })
                 cursor_val = data['cursor']
         except:
